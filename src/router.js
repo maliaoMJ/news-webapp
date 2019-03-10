@@ -1,10 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Main/Home.vue";
-import Login from "./views/login";
 Vue.use(Router);
 const router = new Router({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes: [
     {
@@ -40,16 +39,33 @@ const router = new Router({
     },
     {
       path: "/login",
-      component: Login
+      component: () => import("./views/Login.vue")
+    },
+    {
+      path: "/401",
+      component: () => import("./views/401.vue")
+    },
+    {
+      path: "/403",
+      component: () => import("./views/403.vue")
+    },
+    {
+      path: "/500",
+      component: () => import("./views/NoFound.vue")
+    },
+    {
+      path: "*",
+      component: () => import("./views/NoFound.vue")
     }
   ]
 });
 router.beforeEach(function(to, from, next) {
-  let token = localStorage.getItem("token") || "";
-  if (to.path != "/login" && !token) {
-    next("/login");
-  } else {
-    next();
-  }
+  // let token = localStorage.getItem("token") || "";
+  // if (to.path != "/login" && !token) {
+  //   next("/login");
+  // } else {
+  //   next();
+  // }
+  next();
 });
 export default router;
