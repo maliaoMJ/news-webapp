@@ -27,6 +27,9 @@
     </div>
     <div class="visitor-analyse">
       <h6>访客概况</h6>
+      <div class="visitor-charts">
+        <chart-item :options="detailChartOptions"></chart-item>
+      </div>
     </div>
     <div class="count-analyse">
       <div class="item">
@@ -61,6 +64,9 @@
           <span>内容游览量</span><i class="fa fa-angle-down"></i>
         </p>
       </div>
+      <div class="chart-area">
+        <chart-item :options="detailChartOptions"></chart-item>
+      </div>
     </div>
     <div class="content-list">
       <article-item
@@ -89,11 +95,116 @@
     /></van-popup></div
 ></template>
 <script>
+import echarts from "vue-echarts";
 import ArticleItem from "@/components/ArticleItem/";
+import ChartItem from "@/components/ChartItem/";
+
 export default {
-  components: { ArticleItem },
+  components: { ArticleItem, ChartItem },
   data() {
     return {
+      detailChartOptions: {
+        color: ["#3398DB"],
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow"
+          }
+        },
+        grid: {
+          left: "0%",
+          right: "0%",
+          bottom: "0%",
+          top: "15%",
+          containLabel: true
+        },
+        xAxis: [
+          {
+            type: "category",
+            data: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+
+            axisTick: {
+              alignWithLabel: true
+            },
+            axisLabel: {
+              textStyle: {
+                color: "#a6a6a6"
+              }
+            },
+
+            axisLine: {
+              lineStyle: {
+                color: "#eee",
+                width: 1 //这里是为了突出显示加上的
+              }
+            }
+          }
+        ],
+        yAxis: [
+          {
+            type: "value",
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: "dashed",
+                width: 1,
+                color: "#ddd"
+              }
+            },
+            axisLine: {
+              lineStyle: {
+                color: "#fff"
+              }
+            },
+
+            axisLabel: {
+              textStyle: {
+                color: "#a6a6a6"
+              }
+            }
+          }
+        ],
+        series: [
+          {
+            name: "直接访问",
+            type: "bar",
+            barWidth: "15%",
+            data: [380, 270, 100, 334, 260],
+            itemStyle: {
+              normal: {
+                barBorderRadius: [80, 80, 0, 0],
+                //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                color: function(params) {
+                  let colorList = [
+                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      { offset: 0, color: "#7c71d5" },
+                      { offset: 0.5, color: "#a06deb" },
+                      { offset: 1, color: "#c76dda" }
+                    ]),
+                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      { offset: 0, color: "#f8a423" },
+                      { offset: 1, color: "#ee6d27" }
+                    ]),
+                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      { offset: 0, color: "#eff14b" },
+                      { offset: 1, color: "#fbe711" }
+                    ]),
+                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      { offset: 0, color: "#9fff58" },
+                      { offset: 1, color: "#77dd4c" }
+                    ]),
+                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      { offset: 0, color: "#05d1fe" },
+                      { offset: 1, color: "#149aff" }
+                    ])
+                  ];
+                  return colorList[params.dataIndex];
+                }
+              }
+            }
+          }
+        ]
+      },
       articlesList: [
         {
           title: "曾经苍海难为水，除去巫山不是云。",
@@ -228,6 +339,10 @@ export default {
       font-weight: 400;
       color: #4c4c4c;
     }
+    .visitor-charts {
+      width: 100%;
+      height: 3.2rem;
+    }
   }
   .count-analyse {
     width: 100%;
@@ -257,7 +372,8 @@ export default {
         margin-top: 0.15rem;
         text-align: left;
         .number {
-          font-size: 0.7rem;
+          font-size: 0.6rem;
+          font-weight: 500;
         }
         .unit {
           font-size: 0.5rem;
@@ -274,6 +390,11 @@ export default {
     border-top-left-radius: 0.2rem;
     padding: 0.35rem;
     box-sizing: border-box;
+    .chart-area {
+      width: 100%;
+      height: 4.3rem;
+      z-index: 1;
+    }
     .top {
       width: 100%;
       height: 1rem;
@@ -291,6 +412,7 @@ export default {
         font-size: 0.35rem;
         float: right;
         text-align: right;
+        z-index: 888;
         i.fa.fa.fa-angle-down {
           padding-left: 0.1rem;
           font-size: 0.5rem;

@@ -5,12 +5,12 @@ import store from "./store";
 import axios from "@/utils/request";
 import "./registerServiceWorker";
 import fastclick from "fastclick";
+import IEcharts from "vue-echarts-v3/src/lite.js";
+import "echarts/lib/chart/bar";
+import "echarts/lib/component/tooltip";
 import VueLazyload from "vue-lazyload";
-// 引入flexible.js
 import "@/utils/flexible";
 import Vant from "vant";
-
-// 引入Vant UI 组件库
 import "vant/lib/index.css";
 fastclick.attach(document.body);
 Vue.use(VueLazyload, {
@@ -21,6 +21,7 @@ Vue.use(VueLazyload, {
     "http://wanzao2.b0.upaiyun.com/14758515678631475754541_400x400.gif-460.gif",
   attempt: 1
 });
+Vue.component("IEcharts", IEcharts);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
 Vue.use(Vant);
