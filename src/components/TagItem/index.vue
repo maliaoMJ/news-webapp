@@ -1,5 +1,12 @@
 <template>
-  <div :class="[round ? '' : 'circle', 'line-tag']">
+  <div
+    :class="[round ? '' : 'circle', 'line-tag']"
+    :style="{
+      background: backgroundColor,
+      color,
+      border: `${borderWidth} ${borderType} ${borderColor}`
+    }"
+  >
     <slot></slot>
   </div>
 </template>
@@ -10,12 +17,38 @@ export default {
     round: {
       type: Boolean,
       default: true
+    },
+    borderWidth: {
+      type: String,
+      default: "1px"
+    },
+    border: {
+      type: Boolean,
+      default: false
+    },
+    borderColor: {
+      type: String,
+      default: "linear-gradient(to top left, #66daf3 23%, #6287fc)"
+    },
+    borderType: {
+      type: String,
+      default: "solid"
+    },
+    backgroundColor: {
+      type: String,
+      default: "linear-gradient(to top left, #66daf3 23%, #6287fc)"
+    },
+    color: {
+      type: String,
+      default: "#fff"
     }
-  }
+  },
+  mounted() {}
 };
 </script>
 <style lang="scss" scoped>
 .line-tag {
+  overflow: hidden;
   color: #fff;
   width: 1.95rem;
   height: 0.75rem;

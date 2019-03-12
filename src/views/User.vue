@@ -33,15 +33,70 @@
         ><i class="fa fa-angle-right"></i
       ></router-link>
       <div class="tag-box">
-        <tag-item :round="true">财经&nbsp;2</tag-item>
-        <tag-item :round="true">体育&nbsp;2</tag-item>
-        <tag-item :round="true">教育&nbsp;1</tag-item>
-        <tag-item :round="true">娱乐新闻3</tag-item>
-        <tag-item :round="true">美妆博主</tag-item>
-        <tag-item :round="true">爱逛街</tag-item>
-        <tag-item :round="true">健身达人</tag-item>
-        <tag-item :round="true">美妆博主</tag-item>
-        <tag-item :round="true">爱逛街</tag-item>
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >财经&nbsp;2</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >体育&nbsp;2</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >教育&nbsp;1</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >娱乐新闻3</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >美妆博主</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >爱逛街</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          >健身达人</tag-item
+        >
+        <tag-item
+          :round="false"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          ><i class="van-icon van-icon-ellipsis"></i
+        ></tag-item>
       </div>
     </div>
     <div class="visitor-behaviour">
@@ -167,7 +222,7 @@ export default {
         height: 1.3rem;
         width: 100%;
         position: absolute;
-        top: 2.75rem;
+        top: 2.9rem;
         z-index: 7;
         line-height: 1.3rem;
         box-sizing: border-box;
@@ -253,8 +308,20 @@ export default {
     .tag-box {
       position: absolute;
       width: 100%;
-      height: 3rem;
+      min-height: 2.8rem;
       top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-content: space-evenly;
+      i.van-icon-ellipsis {
+        font-size: 0.5rem;
+        /* margin-left: 0.1rem; */
+        line-height: 0.8rem;
+        margin-left: 0;
+      }
     }
   }
   .visitor-behaviour {
