@@ -34,6 +34,10 @@ const router = new Router({
       ]
     },
     {
+      path: "/user/:id",
+      component: () => import("./views/User.vue")
+    },
+    {
       path: "/shareMaterial",
       component: () => import("./views/ShareMaterial.vue")
     },
