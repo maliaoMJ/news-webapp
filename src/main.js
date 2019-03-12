@@ -7,6 +7,8 @@ import "./registerServiceWorker";
 import fastclick from "fastclick";
 import IEcharts from "vue-echarts-v3/src/lite.js";
 import "echarts/lib/chart/bar";
+import "echarts/lib/chart/pie";
+import "echarts/lib/component/title";
 import "echarts/lib/component/tooltip";
 import VueLazyload from "vue-lazyload";
 import "@/utils/flexible";

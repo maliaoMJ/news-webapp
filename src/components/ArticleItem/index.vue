@@ -28,8 +28,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .article-item {
-  height: 1.22rem;
+  height: 1rem;
   width: 100%;
+  margin-top: 0.11rem;
   border-bottom: 2px solid #eaf6ff;
   border-radius: 2px;
   background: #f6f9f9;
@@ -37,18 +38,22 @@ export default {
   flex-direction: row;
   overflow: hidden;
   .left {
-    height: 1.22rem;
+    height: 1rem;
     width: 1rem;
+    box-sizing: border-box;
     font-size: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     .dot {
-      display: inline-block;
+      display: block;
       width: 0.2rem;
       height: 0.2rem;
-      border-radius: 50%;
+      border-radius: 0.2rem;
       background: #5334f4;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
     }
   }
   .right {
@@ -68,7 +73,7 @@ export default {
       white-space: nowrap;
       max-width: 6rem;
       font-size: 0.4rem;
-      line-height: 1.22rem;
+      line-height: 1rem;
       text-align: left;
     }
   }

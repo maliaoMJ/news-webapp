@@ -28,7 +28,21 @@
     <div class="visitor-analyse">
       <h6>访客概况</h6>
       <div class="visitor-charts">
-        <chart-item :options="detailChartOptions"></chart-item>
+        <div class="charts-box">
+          <chart-item :options="visitorChartOptions"></chart-item>
+        </div>
+        <div class="visitor-data-area">
+          <div class="top">
+            <div class="total-line total"></div>
+            <h6 class="title">访问总量</h6>
+            <p class="number">2000</p>
+          </div>
+          <div class="top">
+            <div class="total-line add"></div>
+            <h6 class="title">本月新增</h6>
+            <p class="number">100</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="count-analyse">
@@ -98,7 +112,6 @@
 import echarts from "vue-echarts";
 import ArticleItem from "@/components/ArticleItem/";
 import ChartItem from "@/components/ChartItem/";
-
 export default {
   components: { ArticleItem, ChartItem },
   data() {
@@ -205,6 +218,165 @@ export default {
           }
         ]
       },
+      visitorChartOptions: {
+        title: {
+          text: "200人",
+          x: "center",
+          y: "center",
+          textStyle: {
+            color: "black",
+            fontSize: 14,
+            fontWeight: "bold"
+          }
+        },
+        calculable: true,
+        series: [
+          {
+            name: "访客概况",
+            type: "pie",
+            tooltip: {
+              backgroundColor: "transparent",
+              textStyle: {
+                color: "transparent"
+              }
+            },
+            hoverAnimation: false,
+            radius: [30, 49],
+            data: [
+              {
+                value: 20,
+                name: "新增占比",
+                emphasis: {
+                  label: {
+                    show: false
+                  },
+                  labelLine: {
+                    show: false
+                  }
+                },
+                itemStyle: {
+                  color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+                    {
+                      offset: 0,
+                      color: "#f3c401"
+                    },
+                    {
+                      offset: 1,
+                      color: "#efc633"
+                    }
+                  ]),
+                  emphasis: {
+                    label: {
+                      show: false
+                    }
+                  },
+                  labelLine: {
+                    show: false
+                  }
+                },
+                label: {
+                  show: false
+                },
+                labelLine: {
+                  show: false
+                }
+              },
+              {
+                value: 52,
+                name: "访客总量",
+                emphasis: {
+                  label: {
+                    show: false
+                  },
+                  labelLine: {
+                    show: false
+                  }
+                },
+                itemStyle: {
+                  color: "transparent",
+                  show: false,
+                  label: {
+                    show: false
+                  },
+                  labelLine: {
+                    show: false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            name: "访客概况",
+            type: "pie",
+            tooltip: {
+              backgroundColor: "transparent",
+              textStyle: {
+                color: "transparent"
+              }
+            },
+            hoverAnimation: false,
+            radius: [34, 45],
+            emphasis: {
+              label: {
+                show: false
+              },
+              labelLine: {
+                show: false
+              }
+            },
+            data: [
+              {
+                value: 20,
+                name: "访客总量",
+                label: {
+                  show: false //隐藏标示文字
+                },
+                labelLine: {
+                  show: false //隐藏标示线
+                },
+                itemStyle: {
+                  color: "transparent",
+                  show: false,
+                  label: {
+                    show: false //隐藏标示文字
+                  },
+                  labelLine: {
+                    show: false //隐藏标示线
+                  }
+                }
+              },
+              {
+                value: 52,
+                name: "访客总量",
+                label: {
+                  show: false //隐藏标示文字
+                },
+                labelLine: {
+                  show: false //隐藏标示线
+                },
+                itemStyle: {
+                  color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+                    {
+                      offset: 0,
+                      color: "#5b99fd"
+                    },
+                    {
+                      offset: 1,
+                      color: "#5a98fe"
+                    }
+                  ]),
+                  label: {
+                    show: false //隐藏标示文字
+                  },
+                  labelLine: {
+                    show: false //隐藏标示线
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
       articlesList: [
         {
           title: "曾经苍海难为水，除去巫山不是云。",
@@ -267,7 +439,7 @@ export default {
       width: 1.52rem;
       height: 0.6rem;
       font-size: 0.32rem;
-      background: #97d9fa;
+      background: #97d9faa1;
       line-height: 0.6rem;
       position: absolute;
       font-weight: bold;
@@ -275,8 +447,11 @@ export default {
       right: 0.6rem;
       color: #fff;
       border-radius: 0.4rem;
-      border: 2px solid #b3f8ff;
+      border: 1px solid #97d9faa1;
       cursor: pointer;
+      span {
+        line-height: 0.65rem;
+      }
       i.fa.fa-angle-down {
         padding-left: 0.1rem;
         font-weight: bolder;
@@ -342,6 +517,50 @@ export default {
     .visitor-charts {
       width: 100%;
       height: 3.2rem;
+      position: relative;
+      overflow: hidden;
+      .charts-box {
+        width: 60%;
+        height: 3.2rem;
+        float: left;
+        transform: scale(1.05);
+      }
+      .visitor-data-area {
+        width: 40%;
+        height: 3.2rem;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        .top {
+          flex: 1;
+          display: block;
+          width: 100%;
+          .total-line {
+            width: 0.55rem;
+            height: 0.2rem;
+
+            border-radius: 0.5rem;
+            &.total {
+              background: #5a98fe;
+            }
+            &.add {
+              background: #fec401;
+            }
+          }
+          .title {
+            font-size: 0.38rem;
+            padding-top: 0.15rem;
+          }
+          .number {
+            font-size: 0.4rem;
+            text-align: left;
+            padding-left: 0.3rem;
+          }
+          &:first-child {
+            padding-bottom: 0.2rem;
+          }
+        }
+      }
     }
   }
   .count-analyse {

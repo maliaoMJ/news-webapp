@@ -27,8 +27,8 @@ body {
   color: #2c3e50;
   width: 100%;
   height: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  /*max-width: 600px;*/
+  /*margin: 0 auto;*/
   position: relative;
   overflow: hidden;
   display: flex;
