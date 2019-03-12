@@ -14,6 +14,7 @@ import VueLazyload from "vue-lazyload";
 import "@/utils/flexible";
 import Vant from "vant";
 import "vant/lib/index.css";
+
 fastclick.attach(document.body);
 Vue.use(VueLazyload, {
   preLoad: 1.3,
