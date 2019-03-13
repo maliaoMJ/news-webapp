@@ -135,22 +135,22 @@
       <h6 class="title">访客行为</h6>
       <div class="total-box">
         <div class="item">
-          <van-icon name="description" color="#5190d0" />
+          <van-icon name="description" color="#4088ff" />
           <p class="sub-title">游览内容</p>
           <p class="number">10次</p>
         </div>
         <div class="item">
-          <van-icon name="point-gift-o" color="#5190d0" />
+          <van-icon name="point-gift-o" color="#4088ff" />
           <p class="sub-title">游览商品</p>
           <p class="number">110次</p>
         </div>
         <div class="item">
-          <van-icon name="shopping-cart-o" color="#5190d0" />
+          <van-icon name="shopping-cart-o" color="#4088ff" />
           <p class="sub-title">加入购物车</p>
           <p class="number">2次</p>
         </div>
         <div class="item">
-          <van-icon name="gold-coin-o" color="#5190d0" />
+          <van-icon name="gold-coin-o" color="#4088ff" />
           <p class="sub-title">购买商品</p>
           <p class="number">1次</p>
         </div>

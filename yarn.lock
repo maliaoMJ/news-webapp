@@ -8238,6 +8238,11 @@ vue-lazyload@^1.2.6:
   resolved "http://registry.npm.taobao.org/vue-lazyload/download/vue-lazyload-1.2.6.tgz#baa04c172d52a812608eb12c7a6bfb14f5c91079"
   integrity sha1-uqBMFy1SqBJgjrEsemv7FPXJEHk=
 
+vue-light-timeline@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vue-light-timeline/-/vue-light-timeline-1.0.1.tgz#312f1f495ed4cb77a5198100b082d02988dd3a99"
+  integrity sha512-0cZaHKfitKMLaBt6zxwr9GPLLEJTsIDnvVRzsrOlJle5A1gsSSLUEaWsBRkJzNHpu3AsRgBHVLrXJQ2FiHSplw==
+
 vue-loader@^15.6.4:
   version "15.7.0"
   resolved "http://registry.npm.taobao.org/vue-loader/download/vue-loader-15.7.0.tgz#27275aa5a3ef4958c5379c006dd1436ad04b25b3"
@@ -8300,7 +8305,14 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^2.6.6:
+vue-timeline@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vue-timeline/-/vue-timeline-0.1.0.tgz#31f4a55707ee3eab28a9ad0e3a3971cecaf7388d"
+  integrity sha1-MfSlVwfuPqsoqa0OOjlxzsr3OI0=
+  dependencies:
+    vue "^2.1.10"
+
+vue@^2.1.10, vue@^2.6.6:
   version "2.6.8"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.6.8.tgz#f21cbc536bfc14f7d1d792a137bb12f69e60ea91"
   integrity sha1-8hy8U2v8FPfR15KhN7sS9p5g6pE=

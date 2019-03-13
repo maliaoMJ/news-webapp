@@ -10,12 +10,14 @@ import "echarts/lib/chart/bar";
 import "echarts/lib/chart/pie";
 import "echarts/lib/component/title";
 import "echarts/lib/component/tooltip";
+import LightTimeline from "vue-light-timeline";
 import VueLazyload from "vue-lazyload";
 import "@/utils/flexible";
 import Vant from "vant";
 import "vant/lib/index.css";
 
 fastclick.attach(document.body);
+Vue.use(LightTimeline);
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error:

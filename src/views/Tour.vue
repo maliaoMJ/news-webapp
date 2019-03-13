@@ -117,10 +117,11 @@ export default {
   display: flex;
   flex-direction: column;
   .article-container {
-    width: 100%;
+    width: 108%;
     height: 4rem;
     background: #fff;
     overflow: hidden;
+    margin-left: -5%;
   }
   .user-list-container {
     flex: 1;
