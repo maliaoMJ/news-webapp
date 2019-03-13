@@ -4,7 +4,10 @@
     :style="{
       background: backgroundColor,
       color,
-      border: `${borderWidth} ${borderType} ${borderColor}`
+      border: `${borderWidth} ${borderType} ${borderColor}`,
+      paddingLeft: comPaddingLeft,
+      paddingRight: comPaddingRight,
+      width: comWidth
     }"
   >
     <slot></slot>
@@ -22,9 +25,21 @@ export default {
       type: String,
       default: "1px"
     },
+    paddingLeft: {
+      type: String,
+      default: "0"
+    },
+    paddingRight: {
+      type: String,
+      default: "0"
+    },
     border: {
       type: Boolean,
       default: false
+    },
+    width: {
+      type: String,
+      default: "1.95rem"
     },
     borderColor: {
       type: String,
@@ -43,7 +58,13 @@ export default {
       default: "#fff"
     }
   },
-  mounted() {}
+  data() {
+    return {
+      comPaddingLeft: !this.round ? "0.2rem" : this.paddingLeft,
+      comPaddingRight: !this.round ? "0.2rem" : this.paddingRight,
+      comWidth: !this.round ? "0.75rem" : this.width
+    };
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -53,9 +74,10 @@ export default {
   width: 1.95rem;
   height: 0.75rem;
   font-size: 0.34rem;
+  box-sizing: border-box;
   background: linear-gradient(to top left, #66daf3 23%, #6287fc);
   border-radius: 0.4rem;
-  line-height: 0.84rem;
+  line-height: 0.8rem;
   text-align: center;
   letter-spacing: 0.03rem;
   display: inline-block;

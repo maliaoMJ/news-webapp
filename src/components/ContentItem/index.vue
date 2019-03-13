@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="date-box">
-      <span>02/30/2019</span>
+      <slot name="sub"><span>02/30/2019</span></slot>
     </div>
   </div>
 </template>

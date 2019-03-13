@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Main/Home.vue";
+import Home from "./views/Main/Index.vue";
 Vue.use(Router);
 const router = new Router({
   mode: "hash",
@@ -36,6 +36,10 @@ const router = new Router({
     {
       path: "/user/:id",
       component: () => import("./views/User.vue")
+    },
+    {
+      path: "/avocation/:id",
+      component: () => import("./views/Avocation.vue")
     },
     {
       path: "/shareMaterial",

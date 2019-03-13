@@ -39,6 +39,9 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
           >财经&nbsp;2</tag-item
         >
         <tag-item
@@ -47,6 +50,20 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
+          >八卦&nbsp;2</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
           >体育&nbsp;2</tag-item
         >
         <tag-item
@@ -55,6 +72,20 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
+          >美妆&nbsp;22</tag-item
+        >
+        <tag-item
+          :round="true"
+          color="#9a9a9a"
+          backgroundColor="#fff"
+          borderColor="#9a9a9a"
+          borderWidth="1px"
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
           >教育&nbsp;1</tag-item
         >
         <tag-item
@@ -63,6 +94,9 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
           >娱乐新闻3</tag-item
         >
         <tag-item
@@ -71,7 +105,10 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
-          >美妆博主</tag-item
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
+          >美妆博主&nbsp;44</tag-item
         >
         <tag-item
           :round="true"
@@ -79,15 +116,10 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
-          >爱逛街</tag-item
-        >
-        <tag-item
-          :round="true"
-          color="#9a9a9a"
-          backgroundColor="#fff"
-          borderColor="#9a9a9a"
-          borderWidth="1px"
-          >健身达人</tag-item
+          width="auto"
+          paddingLeft=".2rem"
+          paddingRight=".2rem"
+          >爱逛街&nbsp;23</tag-item
         >
         <tag-item
           :round="false"
@@ -228,6 +260,9 @@ export default {
         box-sizing: border-box;
         padding-top: 0.2rem;
         font-size: 0;
+        i.fa.fa-angle-right {
+          padding-top: 0.13rem;
+        }
       }
       .base-info {
         width: 100%;
@@ -320,7 +355,7 @@ export default {
         font-size: 0.5rem;
         /* margin-left: 0.1rem; */
         line-height: 0.8rem;
-        margin-left: 0;
+        margin-left: -0.1rem;
       }
     }
   }

@@ -30,7 +30,7 @@ export default {
     background: #fff;
     border-radius: 0.1rem;
     overflow: hidden;
-    box-shadow: 5px 5px 10px #1d1c1c1c;
+    /*box-shadow: 5px 5px 10px #1d1c1c1c;*/
     padding: 0.4rem 0.6rem;
     box-sizing: border-box;
     img {
