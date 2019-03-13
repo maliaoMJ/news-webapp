@@ -15,7 +15,9 @@
       </div>
       <div class="bottom">
         <span class="address">河北 廊坊</span>
-        <span class="history">1分钟游览过金品梅</span>
+        <slot name="history"
+          ><span class="history">1分钟游览过笑傲江湖</span></slot
+        >
       </div>
     </div>
   </div>

@@ -42,6 +42,10 @@ const router = new Router({
       component: () => import("./views/Avocation.vue")
     },
     {
+      path: "/tour/:id",
+      component: () => import("./views/Tour.vue")
+    },
+    {
       path: "/shareMaterial",
       component: () => import("./views/ShareMaterial.vue")
     },
