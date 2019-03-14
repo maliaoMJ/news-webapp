@@ -27,7 +27,7 @@ echo "========== Build Docker Image END=============="
 
 echo "===========Begin Build Docker Container============"
 
-docker run -d -p 80:80 --name lavector-wechat-web  lavector/lavector-wechat-web-image
+docker run -d -p 3107:80 --name lavector-wechat-web  lavector/lavector-wechat-web-image
 
 echo "Build Docker Container Success! please open your browser!"
 

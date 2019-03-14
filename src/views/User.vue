@@ -125,6 +125,8 @@
           backgroundColor="#fff"
           borderColor="#9a9a9a"
           borderWidth="1px"
+          paddingRight="0rem"
+          paddingLeft="0rem"
           ><i class="van-icon van-icon-ellipsis"></i
         ></tag-item>
       </div>
@@ -253,7 +255,7 @@ export default {
         height: 1.3rem;
         width: 100%;
         position: absolute;
-        top: 2.9rem;
+        top: 3.1rem;
         z-index: 7;
         overflow: hidden;
         display: flex;
@@ -270,40 +272,55 @@ export default {
         width: 100%;
         height: 0.8rem;
         position: relative;
-        background: red;
         top: 1.1rem;
         text-align: center;
         padding: 0;
         margin: 0;
         line-height: 0.4rem;
+        overflow: hidden;
         .username {
           font-size: 0.4rem;
+          padding-left: 0.7rem;
+          padding-right: 0.1rem;
+          vertical-align: middle;
         }
         .gender {
-          font-size: 0.3rem;
-
-          i.fa {
-            border-radius: 1rem;
-            display: block;
-            width: 1rem;
-            height: 0.5rem;
-            margin-left: 0.1rem;
-            font-size: 0.4rem;
-            &.venus {
-              background: #fe67cd;
-            }
-            &.mars {
-              background: deepskyblue;
-            }
-            i.fa-venus {
-              transform: rotate(45deg);
-              vertical-align: middle;
-            }
-            i.fa-mars {
-              color: #fff;
-            }
+          font-size: 0.25rem;
+          background: #fe67cd;
+          border-radius: 0.5rem;
+          padding-left: 0.1rem;
+          padding-right: 0.1rem;
+          padding-top: 2px;
+          color: #fff;
+          vertical-align: middle;
+          i.fa.fa-venus {
+            transform: rotate(45deg);
           }
         }
+        /*.gender {*/
+        /*font-size: 0.3rem;*/
+        /*i.fa {*/
+        /*border-radius: 1rem;*/
+        /*display: block;*/
+        /*width: 1rem;*/
+        /*height: 0.5rem;*/
+        /*margin-left: 0.1rem;*/
+        /*font-size: 0.4rem;*/
+        /*&.venus {*/
+        /*background: #fe67cd;*/
+        /*}*/
+        /*&.mars {*/
+        /*background: deepskyblue;*/
+        /*}*/
+        /*i.fa-venus {*/
+        /*transform: rotate(45deg);*/
+        /*vertical-align: middle;*/
+        /*}*/
+        /*i.fa-mars {*/
+        /*color: #fff;*/
+        /*}*/
+        /*}*/
+        /*}*/
       }
     }
   }
@@ -345,7 +362,7 @@ export default {
         font-size: 0.5rem;
         /* margin-left: 0.1rem; */
         line-height: 0.8rem;
-        margin-left: -0.1rem;
+        padding-right: 0;
       }
     }
   }

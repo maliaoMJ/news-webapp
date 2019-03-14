@@ -60,8 +60,8 @@ export default {
   },
   data() {
     return {
-      comPaddingLeft: !this.round ? "0.2rem" : this.paddingLeft,
-      comPaddingRight: !this.round ? "0.2rem" : this.paddingRight,
+      comPaddingLeft: !this.round ? "0rem" : this.paddingLeft,
+      comPaddingRight: !this.round ? "0rem" : this.paddingRight,
       comWidth: !this.round ? "0.75rem" : this.width
     };
   }
@@ -72,12 +72,13 @@ export default {
   overflow: hidden;
   color: #fff;
   width: 1.95rem;
-  height: 0.8rem;
+  height: 0.75rem;
   font-size: 0.34rem;
   box-sizing: border-box;
   background: linear-gradient(to top left, #66daf3 23%, #6287fc);
   border-radius: 0.4rem;
-  line-height: 0.75rem;
+
+  line-height: 0.8rem;
   text-align: center;
   letter-spacing: 0.03rem;
   display: block;
@@ -97,6 +98,7 @@ export default {
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50%;
+    margin-top: 0.02rem;
   }
 }
 </style>
