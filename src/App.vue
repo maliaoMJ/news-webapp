@@ -15,6 +15,8 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .van-tabbar-item__icon .van-icon {
   font-size: 22px;
@@ -34,6 +36,7 @@ body {
   display: flex;
   flex-direction: column;
 
+  -webkit-overflow-scrolling: touch;
   .mainViewContainer {
     width: 100%;
     flex: 1;
@@ -140,10 +143,10 @@ body {
     }
     .time {
       position: absolute;
-      top: 1.3rem;
+      top: 1.2rem;
       width: 100%;
       height: 0.4rem;
-      font-size: 0.1rem;
+      font-size: 0.25rem;
       color: #999999;
       transform: scale(0.9);
       margin-left: -0.2rem;

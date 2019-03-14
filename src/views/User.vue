@@ -12,10 +12,8 @@
           alt=""
         />
         <div class="base-info">
-          <div class="name">李长彤</div>
-          <div class="gender">
-            <span class="venus"><i class="fa fa-venus"></i>&nbsp;25</span>
-          </div>
+          <span class="username">李长彤</span>
+          <span class="gender venus"><i class="fa fa-venus"></i>&nbsp;25</span>
         </div>
         <div class="city">北京 朝阳区</div>
         <div class="iphone-number">13213832373</div>
@@ -183,6 +181,7 @@ export default {
   background: #f6f9f9;
   position: relative;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* 用于 ios5+ */
   .top-box {
     width: 100%;
     height: 7.9rem;
@@ -256,49 +255,40 @@ export default {
         position: absolute;
         top: 2.9rem;
         z-index: 7;
-        line-height: 1.3rem;
-        box-sizing: border-box;
-        padding-top: 0.2rem;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-content: space-evenly;
         font-size: 0;
         i.fa.fa-angle-right {
-          padding-top: 0.13rem;
         }
       }
       .base-info {
         width: 100%;
-        height: 2rem;
-        /*background:red;*/
+        height: 0.8rem;
         position: relative;
-        .name {
-          font-size: 0.46rem;
-          width: 3rem;
-          height: 1rem;
-          /*background:yellow;*/
-          position: absolute;
-          left: 50%;
-          top: 1.1rem;
-          margin-left: -1.5rem;
+        background: red;
+        top: 1.1rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        line-height: 0.4rem;
+        .username {
+          font-size: 0.4rem;
         }
         .gender {
           font-size: 0.3rem;
-          width: 3rem;
-          height: 1rem;
-          line-height: 0.74rem;
-          /*background:yellow;*/
-          position: absolute;
-          left: 50%;
-          top: 1.1rem;
 
-          color: #fff;
-          margin-left: -0.25rem;
-          span {
-            padding-left: 0.2rem;
-            padding-right: 0.2rem;
-            padding-top: 2px;
-            padding-bottom: 2px;
+          i.fa {
             border-radius: 1rem;
+            display: block;
+            width: 1rem;
+            height: 0.5rem;
             margin-left: 0.1rem;
-            font-size: 0.1rem;
+            font-size: 0.4rem;
             &.venus {
               background: #fe67cd;
             }

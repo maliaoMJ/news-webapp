@@ -72,22 +72,26 @@ export default {
   overflow: hidden;
   color: #fff;
   width: 1.95rem;
-  height: 0.75rem;
+  height: 0.8rem;
   font-size: 0.34rem;
   box-sizing: border-box;
   background: linear-gradient(to top left, #66daf3 23%, #6287fc);
   border-radius: 0.4rem;
-  line-height: 0.8rem;
+  line-height: 0.75rem;
   text-align: center;
   letter-spacing: 0.03rem;
-  display: inline-block;
+  display: block;
   margin-left: 0.2rem;
   i {
     font-size: 0.5rem;
-    margin-left: 0.1rem;
+    padding-left: 0.1rem;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 0.75rem;
   }
   &:first-child {
-    margin-left: 0.12rem;
+    margin-left: 0;
   }
   &.circle {
     width: 0.75rem;

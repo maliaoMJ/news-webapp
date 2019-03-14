@@ -23,5 +23,8 @@ module.exports = {
     sourceMap: false,
     // 启用 CSS modules for all css / pre-processor files.
     modules: false
+  },
+  devServer: {
+    port: 3107
   }
 };
